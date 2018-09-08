@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{id}', 'HomeController@show')->name('show');
+Route::get('/home/album/{id}', 'HomeController@show')->name('album');
+Route::get('/home/artist/{id}', 'HomeController@show')->name('artist');
+Route::post('/lyric','HomeController@find')->name('lyric.find');
